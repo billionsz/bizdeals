@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/go",
+      "source": "/",
       "destination": "https://bizdealz.vercel.app/",
       "permanent": false
     }
