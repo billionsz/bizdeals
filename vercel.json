@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "https://bizdealz.vercel.app/",
+      "destination": "https://bizdealz.vercel.app/index.php",
       "permanent": false
     }
   ]
