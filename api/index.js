@@ -5,7 +5,7 @@ const path = require('path');
 const CONFIG = {
   whitePage:        'site.html',
   offerPage:        'offer/offer.html',
-  allowedCountries: [],   // e.g. ['US','GB'] or [] for all
+  allowedCountries: ['SA'],   // e.g. ['US','GB'] or [] for all
   blockProxies:     true,
 };
 // ───────────────────────────────────────────────────────────────────────────────
