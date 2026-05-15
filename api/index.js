@@ -67,6 +67,26 @@ const REVIEWER_REFERERS = [
 
 
 export default async function handler(req, res) {
+export default async function handler(req, res) {
+
+  // ─── TEMPORARY DEBUG — remove after confirming ──────────────────────────────
+  if (req.url === '/debug') {
+    const files = {
+      cwd: process.cwd(),
+      siteExists: fs.existsSync(path.join(process.cwd(), 'site.html')),
+      offerExists: fs.existsSync(path.join(process.cwd(), 'offer/offer.html')),
+    };
+    return res.json(files);
+  }
+  // ────────────────────────────────────────────────────────────────────────────
+
+  const ua      = req.headers['user-agent'] || '';
+  const referer = req.headers['referer'] || req.headers['referrer'] || '';
+  const lang    = req.headers['accept-language'] || '';
+  const ip      = getRealIP(req);
+
+  // ... rest continues unchanged
+  
   const ua      = req.headers['user-agent'] || '';
   const referer = req.headers['referer'] || req.headers['referrer'] || '';
   const lang    = req.headers['accept-language'] || '';
